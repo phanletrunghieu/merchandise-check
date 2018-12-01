@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.vision.block.kotlin"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "com.android.support:design:$androidSupportVertion"
+
+    //test lib
+    implementation "com.android.support:support-v4:$androidSupportVertion"
+    implementation "com.google.firebase:firebase-auth:$firebaseAuthVersion"
+    implementation "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
+    implementation "com.google.firebase:firebase-invites:$firebaseInviteVersion"
+
+    testImplementation "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+    testImplementation 'org.assertj:assertj-core:3.8.0'
+    testImplementation 'org.mockito:mockito-inline:2.19.0'
+    androidTestImplementation 'org.mockito:mockito-android:2.8.47'
+
+    //reactive programming
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlinVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rxbindingVersion"
+
+    //call restful
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptorVersion"
+
+    //load image
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    //time library
+    implementation "joda-time:joda-time:$jodaTimeVersion"
+
+    //common for use intent, dialog, toast,v.v.... simply
+    implementation "org.jetbrains.anko:anko-appcompat-v7-commons:$ankoVersion"
+
+    //map
+    implementation "com.google.android.gms:play-services-maps:$placeServicesVersion"
+    implementation "com.google.android.gms:play-services-places:$placeServicesVersion"
+    implementation "com.google.android.gms:play-services-location:$placeServicesVersion"
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+
+    //local database
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
+
+    //custom recycler view with shimmer views
+    implementation "com.github.sharish:ShimmerRecyclerView:$shimmerVersion"
+
+    implementation "com.airbnb.android:lottie:$lottieVertion"
+
+    //drawable circle image
+    implementation "de.hdodenhof:circleimageview:$circleimageviewVertion"
+
+    //login with facebookk
+    //noinspection GradleDependency
+    implementation "com.facebook.android:facebook-login:$facebookLoginVertion"
+
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVertion"
+
+    //PageIndicatorView
+    implementation 'com.romandanylyk:pageindicatorview:1.0.1'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.1@aar'
+    implementation "com.android.support:support-annotations:$androidSupportVertion"
+    //noinspection GradleDependency
+    implementation "com.android.support:support-compat:$androidSupportVertion"
+    //noinspection GradleDependency
+    implementation "com.android.support:support-core-ui:$androidSupportVertion"
+
+    //RxPermissions
+    implementation "com.github.tbruyelle:rxpermissions:$rxpermissionsVertion"
+
+    //KeyboardVisibilityEvent
+    implementation "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:$keyboardVisibilityEventVertion"
+
+    // tutorial caseview
+    implementation "com.github.florent37:tutoshowcase:$tutoshowcaseVertion"
+    implementation "com.github.faruktoptas:FancyShowCaseView:$tutoshowcaseVertion"
+    implementation "com.github.iammert:MaterialIntroView:$materialIntroViewVertion"
+    implementation 'com.abanoub.androidlib:walkthrough:1.0.3:release@aar'
+    implementation "com.goka:walker:$walkerVertion"
+    implementation "com.github.popalay:tutors:$tutorsKotlinVertion"
+    implementation "com.github.popalay:tutors-kotlin:$tutorsKotlinVertion"
+    // thread
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesVertion"
+
+    implementation "com.github.japgolly.android:svg-android:$svgVertion"
+
+    implementation "com.github.angads25:toggle:$toggleVertion"
+
+    implementation "com.github.pulse-id:CustomAutoCompleteLocation:$customAutoCompleteLocationVertion"
+    implementation "com.jpardogo.materialtabstrip:library:$materialtabstripVertion"
+    implementation "com.daimajia.swipelayout:library:$swipelayoutVertion"
+    implementation "io.branch.sdk.android:library:$androidSdkVertion"
+
+    implementation "org.greenrobot:eventbus:$greenrobotEventbusVertion"
+    implementation "jp.wasabeef:recyclerview-animators:$recyclerviewAnimatorsVertion"
+    implementation "com.github.ybq:Android-SpinKit:$spinKitVertion"
+
+    implementation 'com.google.android.gms:play-services-vision:16.2.0'
+    implementation 'info.androidhive:barcode-reader:1.1.2'
+
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

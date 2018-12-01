@@ -1,0 +1,2 @@
+export const FETCH_LIST_LOGS = "FETCH_LIST_LOGS"
+export const CREATE_NEW_LOG = "CREATE_NEW_LOG"

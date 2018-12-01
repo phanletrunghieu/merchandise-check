@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/white" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/cvTopBarUpdateUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/relativeLayoutUpdateUser"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorAccent"
+                android:shadowColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/lato_semibold"
+                    android:text="An Le"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/material"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.006"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+            android:id="@+id/svPD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:id="@+id/ivProduct"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                    android:id="@+id/tvBranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="TiKi"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/lato_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    tools:ignore="MissingConstraints" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ivProduct"/>
+
+            <TextView
+                    android:id="@+id/tvBranchName2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Work Log"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/lato_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tvContent"/>
+            <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorText"
+                    android:fontFamily="@font/lato_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBranchName" app:layout_constraintHorizontal_bias="0.0"/>
+
+            <TextView
+                    android:id="@+id/tvXXX"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorText"
+                    android:fontFamily="@font/lato_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="28dp"
+                    app:layout_constraintTop_toBottomOf="parent"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvLogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBranchName2"/>
+
+
+            <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="4"
+                    app:layout_constraintTop_toBottomOf="@+id/rvLogs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"/>
+
+            <TextView
+                    android:id="@+id/btVote"
+                    android:layout_width="100dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/lato_semibold"
+                    android:background="@drawable/buttonloginfacebook"
+                    android:clickable="true"
+                    android:elevation="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="VOTE"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

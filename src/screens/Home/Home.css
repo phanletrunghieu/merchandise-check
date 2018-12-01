@@ -1,0 +1,187 @@
+
+.circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: circle 1s linear infinite;
+  animation-name: circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  will-change: transform;
+
+}
+@keyframes circle{
+  100% {
+      transform: rotate(1turn);
+  }
+}
+
+.circle2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: circle2 1s linear infinite;
+  animation-name: circle2;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  will-change: transform;
+}
+@keyframes circle2{
+  0% {
+      transform: rotate(1turn);
+  }
+}
+
+#animated_div {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  animation: animated_div 5s, square 2s linear 6s infinite;
+}
+
+
+/* Standard syntax */
+@keyframes animated_div {
+  0% {
+  transform: rotate(0deg);
+  left: 0px;
+  }
+  25% {
+      transform: rotate(20deg);
+      left: 0px;
+  }
+  50% {
+      transform: rotate(0deg);
+      left: -1800px;
+  }
+
+  55% {
+      transform: rotate(0deg);
+      left: -1800px;
+  }
+  70% {
+      transform: rotate(0deg);
+      left: -1700px;
+  }
+  100% {
+      transform: rotate(-360deg);
+      left: 0px;
+  }
+}
+
+#animated_div_left {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  animation: animated_div_left 5s, square 2s linear 5s infinite;
+}
+
+
+/* Standard syntax */
+@keyframes animated_div_left {
+  0% {
+  transform: rotate(0deg);
+  left: 0px;
+  }
+  25% {
+      transform: rotate(20deg);
+      left: 0px;
+  }
+  50% {
+      transform: rotate(0deg);
+      left: 1800px;
+  }
+
+  55% {
+      transform: rotate(0deg);
+      left: 1800px;
+  }
+  70% {
+      transform: rotate(0deg);
+      left: 1700px;
+  }
+  100% {
+      transform: rotate(-360deg);
+      left: 0px;
+  }
+}
+.MemberTitle {
+  font-size: 50px;
+  text-Align: center;
+  font-weight: bold;
+  font-family: 'UTM von',sans-serif;
+}
+
+.MemberName {
+  font-size: 36px;
+  text-Align: center;
+  font-weight: bold;
+  font-family: 'UTM von',sans-serif;
+}
+.MemberInfo {
+  font-size: 20px;
+  text-Align: center;
+  font-family: 'UTM von',sans-serif;
+}
+#Term {
+}
+.Background  {
+  background: linear-gradient(160deg, #373990 0%, #F25232 100%);
+}
+.NavBarBackground {
+  background: linear-gradient(160deg, #373990 0%, #F25232 100%);
+  width: 100%;
+}
+.Policy {
+  background:  url(https://stateofchain.io/static/assets/images/committee-decoration.png) no-repeat left 0 top 200px;
+  height: 100vh;
+  display: flex;
+  flex-Direction: colum;
+  align-Items: center
+}
+.BackgroundUserInfo {
+  background: linear-gradient(50deg,#6790a8 0,#e09ac3);
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#user {
+}
+#intro  {
+}
+#footer {
+
+}
+.square { 
+  animation: square 2s linear 1s infinite alternate;
+}
+@keyframes square {
+  0%   {left:0px; top:0px;}
+  50%  {left:50px; top:0px;}
+  100%  {left:0px; top:0px;}
+}
+.emerge {
+  transition: 0.5s all ease;
+}
+.emerge:hover {
+    /* box-shadow: 0 0 2rem gray; */
+    transform: scale(1.1)
+}
+.FooterBackground {
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background-Color: #4D3C85;
+  position: relative;
+}
