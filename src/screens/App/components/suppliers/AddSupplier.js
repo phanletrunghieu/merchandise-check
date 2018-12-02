@@ -13,7 +13,7 @@ const styles = (theme) => ({
 
 class AddSupplier extends Component {
   state = {
-    address: "0x023470238090234903249028303432343",
+    address: "0x627306090abaB3A6e1400e9345bC60c78a8BEf57",
     name: "Hieu Dep Trai"
   }
 
