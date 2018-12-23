@@ -1,24 +1,24 @@
 {
   "contractName": "ProductModel",
   "abi": [],
-  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820a161de5fa960cff2890c6b42f44caa81d920e0db46f8efb18b1d66c5bb7049c60029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820a161de5fa960cff2890c6b42f44caa81d920e0db46f8efb18b1d66c5bb7049c60029",
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a7230582083e82e7f40f2432cc3d0cc98c9eb68bbc1d423c5a0fd2eef8af946773c7aad5c0029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a7230582083e82e7f40f2432cc3d0cc98c9eb68bbc1d423c5a0fd2eef8af946773c7aad5c0029",
   "sourceMap": "26:563:4:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
   "deployedSourceMap": "26:563:4:-;;;;;;;;",
   "source": "pragma solidity ^0.4.24;\n\nlibrary ProductModel {\n    struct Product {\n        bytes32 id;\n        string name;\n        string description;\n        string image;//ipfs hash\n\n        uint256 index;//similar to id, but it can change\n\n        // account can add logs\n        bytes32[] partnerIds;// index => partnerID\n        uint256[] partnerIdsIndex;// partnerID(hash) => index\n\n        // relationshipp with SupplierModel\n        address owner;\n\n        // relationshipp with LogModel\n        bytes32[] logIds;// index => logID\n        uint256[] logIdsIndex;// logID (hash) => index\n    }\n}",
-  "sourcePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/ProductModel.sol",
+  "sourcePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/ProductModel.sol",
   "ast": {
-    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/ProductModel.sol",
+    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/ProductModel.sol",
     "exportedSymbols": {
       "ProductModel": [
-        1093
+        1097
       ]
     },
-    "id": 1094,
+    "id": 1098,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1067,
+        "id": 1071,
         "literals": [
           "solidity",
           "^",
@@ -34,23 +34,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1093,
+        "id": 1097,
         "linearizedBaseContracts": [
-          1093
+          1097
         ],
         "name": "ProductModel",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "ProductModel.Product",
-            "id": 1092,
+            "id": 1096,
             "members": [
               {
                 "constant": false,
-                "id": 1069,
+                "id": 1073,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "78:10:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -59,7 +59,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 1068,
+                  "id": 1072,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "78:7:4",
@@ -73,10 +73,10 @@
               },
               {
                 "constant": false,
-                "id": 1071,
+                "id": 1075,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "98:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -85,7 +85,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1070,
+                  "id": 1074,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "98:6:4",
@@ -99,10 +99,10 @@
               },
               {
                 "constant": false,
-                "id": 1073,
+                "id": 1077,
                 "name": "description",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "119:18:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -111,7 +111,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1072,
+                  "id": 1076,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "119:6:4",
@@ -125,10 +125,10 @@
               },
               {
                 "constant": false,
-                "id": 1075,
+                "id": 1079,
                 "name": "image",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "147:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -137,7 +137,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1074,
+                  "id": 1078,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "147:6:4",
@@ -151,10 +151,10 @@
               },
               {
                 "constant": false,
-                "id": 1077,
+                "id": 1081,
                 "name": "index",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "181:13:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -163,7 +163,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1076,
+                  "id": 1080,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "181:7:4",
@@ -177,10 +177,10 @@
               },
               {
                 "constant": false,
-                "id": 1080,
+                "id": 1084,
                 "name": "partnerIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "271:20:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -190,7 +190,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1078,
+                    "id": 1082,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "271:7:4",
@@ -199,7 +199,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1079,
+                  "id": 1083,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "271:9:4",
@@ -213,10 +213,10 @@
               },
               {
                 "constant": false,
-                "id": 1083,
+                "id": 1087,
                 "name": "partnerIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "322:25:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -226,7 +226,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1081,
+                    "id": 1085,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "322:7:4",
@@ -235,7 +235,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1082,
+                  "id": 1086,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "322:9:4",
@@ -249,10 +249,10 @@
               },
               {
                 "constant": false,
-                "id": 1085,
+                "id": 1089,
                 "name": "owner",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "429:13:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -261,7 +261,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1084,
+                  "id": 1088,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "429:7:4",
@@ -275,10 +275,10 @@
               },
               {
                 "constant": false,
-                "id": 1088,
+                "id": 1092,
                 "name": "logIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "492:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -288,7 +288,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1086,
+                    "id": 1090,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "492:7:4",
@@ -297,7 +297,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1087,
+                  "id": 1091,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "492:9:4",
@@ -311,10 +311,10 @@
               },
               {
                 "constant": false,
-                "id": 1091,
+                "id": 1095,
                 "name": "logIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "535:21:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -324,7 +324,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1089,
+                    "id": 1093,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "535:7:4",
@@ -333,7 +333,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1090,
+                  "id": 1094,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "535:9:4",
@@ -348,29 +348,29 @@
             ],
             "name": "Product",
             "nodeType": "StructDefinition",
-            "scope": 1093,
+            "scope": 1097,
             "src": "53:534:4",
             "visibility": "public"
           }
         ],
-        "scope": 1094,
+        "scope": 1098,
         "src": "26:563:4"
       }
     ],
     "src": "0:589:4"
   },
   "legacyAST": {
-    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/ProductModel.sol",
+    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/ProductModel.sol",
     "exportedSymbols": {
       "ProductModel": [
-        1093
+        1097
       ]
     },
-    "id": 1094,
+    "id": 1098,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1067,
+        "id": 1071,
         "literals": [
           "solidity",
           "^",
@@ -386,23 +386,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1093,
+        "id": 1097,
         "linearizedBaseContracts": [
-          1093
+          1097
         ],
         "name": "ProductModel",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "ProductModel.Product",
-            "id": 1092,
+            "id": 1096,
             "members": [
               {
                 "constant": false,
-                "id": 1069,
+                "id": 1073,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "78:10:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -411,7 +411,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 1068,
+                  "id": 1072,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "78:7:4",
@@ -425,10 +425,10 @@
               },
               {
                 "constant": false,
-                "id": 1071,
+                "id": 1075,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "98:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -437,7 +437,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1070,
+                  "id": 1074,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "98:6:4",
@@ -451,10 +451,10 @@
               },
               {
                 "constant": false,
-                "id": 1073,
+                "id": 1077,
                 "name": "description",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "119:18:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -463,7 +463,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1072,
+                  "id": 1076,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "119:6:4",
@@ -477,10 +477,10 @@
               },
               {
                 "constant": false,
-                "id": 1075,
+                "id": 1079,
                 "name": "image",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "147:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -489,7 +489,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1074,
+                  "id": 1078,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "147:6:4",
@@ -503,10 +503,10 @@
               },
               {
                 "constant": false,
-                "id": 1077,
+                "id": 1081,
                 "name": "index",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "181:13:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -515,7 +515,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1076,
+                  "id": 1080,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "181:7:4",
@@ -529,10 +529,10 @@
               },
               {
                 "constant": false,
-                "id": 1080,
+                "id": 1084,
                 "name": "partnerIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "271:20:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -542,7 +542,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1078,
+                    "id": 1082,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "271:7:4",
@@ -551,7 +551,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1079,
+                  "id": 1083,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "271:9:4",
@@ -565,10 +565,10 @@
               },
               {
                 "constant": false,
-                "id": 1083,
+                "id": 1087,
                 "name": "partnerIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "322:25:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -578,7 +578,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1081,
+                    "id": 1085,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "322:7:4",
@@ -587,7 +587,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1082,
+                  "id": 1086,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "322:9:4",
@@ -601,10 +601,10 @@
               },
               {
                 "constant": false,
-                "id": 1085,
+                "id": 1089,
                 "name": "owner",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "429:13:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -613,7 +613,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1084,
+                  "id": 1088,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "429:7:4",
@@ -627,10 +627,10 @@
               },
               {
                 "constant": false,
-                "id": 1088,
+                "id": 1092,
                 "name": "logIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "492:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -640,7 +640,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1086,
+                    "id": 1090,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "492:7:4",
@@ -649,7 +649,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1087,
+                  "id": 1091,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "492:9:4",
@@ -663,10 +663,10 @@
               },
               {
                 "constant": false,
-                "id": 1091,
+                "id": 1095,
                 "name": "logIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1092,
+                "scope": 1096,
                 "src": "535:21:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -676,7 +676,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1089,
+                    "id": 1093,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "535:7:4",
@@ -685,7 +685,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1090,
+                  "id": 1094,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "535:9:4",
@@ -700,12 +700,12 @@
             ],
             "name": "Product",
             "nodeType": "StructDefinition",
-            "scope": 1093,
+            "scope": 1097,
             "src": "53:534:4",
             "visibility": "public"
           }
         ],
-        "scope": 1094,
+        "scope": 1098,
         "src": "26:563:4"
       }
     ],
@@ -717,5 +717,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T00:56:16.077Z"
+  "updatedAt": "2018-12-23T13:03:35.462Z"
 }

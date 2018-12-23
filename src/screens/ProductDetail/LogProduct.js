@@ -60,7 +60,7 @@ function LogProduct(props) {
                 <CustomTableCell numeric>
                   {index}
                 </CustomTableCell>
-                <CustomTableCell component="th" scope="row">aaa</CustomTableCell>
+                <CustomTableCell component="th" scope="row">{row.partner.name}</CustomTableCell>
                 <CustomTableCell component="th" scope="row">{new Date(row.createdAt.toNumber()*1000).toLocaleDateString()}</CustomTableCell>
                 <CustomTableCell component="th" scope="row">{row.description}</CustomTableCell>
               </TableRow>

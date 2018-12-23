@@ -62,7 +62,7 @@ contract MerchandiseCheck is Ownable {
         }
         require(isProductOwner || isPartner, "don't have permission to add log");
 
-        logStorage.createLog(_id, _productId, _description, _video, block.timestamp);
+        logStorage.createLog(_id, _productId, _description, msg.sender, _video, block.timestamp);
         productStorage.addLog(_productId, _id);
     }
 

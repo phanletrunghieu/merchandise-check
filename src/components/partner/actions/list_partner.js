@@ -21,7 +21,18 @@ export function listPartner() {
                   return console.error(err);
                 }
 
-                merchandiseCheckEtherInstance.getPartnersBySupplier(coinbase)
+                merchandiseCheckEtherInstance.getSupplier(coinbase)
+                .then(supplier=>{
+                    let listPromise = []
+
+                    for (let i = 1; i < supplier.partnerIds.length; i++) {
+                        const partnerId = supplier.partnerIds[i];
+                        listPromise.push(merchandiseCheckEtherInstance.getPartner(partnerId))
+                    }
+
+                    return Promise.all(listPromise)
+                })
+                // merchandiseCheckEtherInstance.getPartnersBySupplier(coinbase)
                 .then(partners=>{
                     console.log("list partners", partners);
                     

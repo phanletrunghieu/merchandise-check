@@ -16,7 +16,18 @@ export function listLog(productID) {
     // Double-check web3's status.
     if (typeof web3 !== 'undefined') {
         return function(dispatch) {
-            merchandiseCheckEtherInstance.getLogsByProduct(productID)
+            merchandiseCheckEtherInstance.getProduct(productID)
+            .then(product=>{
+                let listPromise = []
+
+                for (let i = 1; i < product.logIds.length; i++) {
+                    const logId = product.logIds[i];
+                    listPromise.push(merchandiseCheckEtherInstance.getLog(logId))
+                }
+
+                return Promise.all(listPromise)
+            })
+            // merchandiseCheckEtherInstance.getLogsByProduct(productID)
             .then(logs=>{
                 dispatch(logList(logs))
             })

@@ -1,24 +1,24 @@
 {
   "contractName": "SupplierModel",
   "abi": [],
-  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a723058201e8becfa973c0203c9ec9aaedf8a9fea458e4e9d874cd840ee55a249a5cb98400029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a723058201e8becfa973c0203c9ec9aaedf8a9fea458e4e9d874cd840ee55a249a5cb98400029",
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820af278b1e8029a503c26771cd2212afdd3929629745555f966cb9789ef4a252c60029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820af278b1e8029a503c26771cd2212afdd3929629745555f966cb9789ef4a252c60029",
   "sourceMap": "26:348:6:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
   "deployedSourceMap": "26:348:6:-;;;;;;;;",
   "source": "pragma solidity ^0.4.24;\n\nlibrary SupplierModel {\n    struct Supplier {\n        address addr;\n        string name;\n\n        uint256 index;\n\n        bytes32[] productIds;// index => productID\n        uint256[] productIdsIndex;// productID(hash) => index\n\n        bytes32[] partnerIds;// index => partnerID\n        uint256[] partnerIdsIndex;// partnerID(hash) => index\n    }\n}",
-  "sourcePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/SupplierModel.sol",
+  "sourcePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/SupplierModel.sol",
   "ast": {
-    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/SupplierModel.sol",
+    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/SupplierModel.sol",
     "exportedSymbols": {
       "SupplierModel": [
-        1124
+        1128
       ]
     },
-    "id": 1125,
+    "id": 1129,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1104,
+        "id": 1108,
         "literals": [
           "solidity",
           "^",
@@ -34,23 +34,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1124,
+        "id": 1128,
         "linearizedBaseContracts": [
-          1124
+          1128
         ],
         "name": "SupplierModel",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "SupplierModel.Supplier",
-            "id": 1123,
+            "id": 1127,
             "members": [
               {
                 "constant": false,
-                "id": 1106,
+                "id": 1110,
                 "name": "addr",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "80:12:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -59,7 +59,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1105,
+                  "id": 1109,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "80:7:6",
@@ -73,10 +73,10 @@
               },
               {
                 "constant": false,
-                "id": 1108,
+                "id": 1112,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "102:11:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -85,7 +85,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1107,
+                  "id": 1111,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "102:6:6",
@@ -99,10 +99,10 @@
               },
               {
                 "constant": false,
-                "id": 1110,
+                "id": 1114,
                 "name": "index",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "124:13:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -111,7 +111,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1109,
+                  "id": 1113,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "124:7:6",
@@ -125,10 +125,10 @@
               },
               {
                 "constant": false,
-                "id": 1113,
+                "id": 1117,
                 "name": "productIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "148:20:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -138,7 +138,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1111,
+                    "id": 1115,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "148:7:6",
@@ -147,7 +147,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1112,
+                  "id": 1116,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "148:9:6",
@@ -161,10 +161,10 @@
               },
               {
                 "constant": false,
-                "id": 1116,
+                "id": 1120,
                 "name": "productIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "199:25:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -174,7 +174,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1114,
+                    "id": 1118,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "199:7:6",
@@ -183,7 +183,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1115,
+                  "id": 1119,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "199:9:6",
@@ -197,10 +197,10 @@
               },
               {
                 "constant": false,
-                "id": 1119,
+                "id": 1123,
                 "name": "partnerIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "262:20:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -210,7 +210,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1117,
+                    "id": 1121,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "262:7:6",
@@ -219,7 +219,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1118,
+                  "id": 1122,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "262:9:6",
@@ -233,10 +233,10 @@
               },
               {
                 "constant": false,
-                "id": 1122,
+                "id": 1126,
                 "name": "partnerIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "313:25:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -246,7 +246,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1120,
+                    "id": 1124,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "313:7:6",
@@ -255,7 +255,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1121,
+                  "id": 1125,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "313:9:6",
@@ -270,29 +270,29 @@
             ],
             "name": "Supplier",
             "nodeType": "StructDefinition",
-            "scope": 1124,
+            "scope": 1128,
             "src": "54:318:6",
             "visibility": "public"
           }
         ],
-        "scope": 1125,
+        "scope": 1129,
         "src": "26:348:6"
       }
     ],
     "src": "0:374:6"
   },
   "legacyAST": {
-    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/SupplierModel.sol",
+    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/SupplierModel.sol",
     "exportedSymbols": {
       "SupplierModel": [
-        1124
+        1128
       ]
     },
-    "id": 1125,
+    "id": 1129,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1104,
+        "id": 1108,
         "literals": [
           "solidity",
           "^",
@@ -308,23 +308,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1124,
+        "id": 1128,
         "linearizedBaseContracts": [
-          1124
+          1128
         ],
         "name": "SupplierModel",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "SupplierModel.Supplier",
-            "id": 1123,
+            "id": 1127,
             "members": [
               {
                 "constant": false,
-                "id": 1106,
+                "id": 1110,
                 "name": "addr",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "80:12:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -333,7 +333,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1105,
+                  "id": 1109,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "80:7:6",
@@ -347,10 +347,10 @@
               },
               {
                 "constant": false,
-                "id": 1108,
+                "id": 1112,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "102:11:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -359,7 +359,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1107,
+                  "id": 1111,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "102:6:6",
@@ -373,10 +373,10 @@
               },
               {
                 "constant": false,
-                "id": 1110,
+                "id": 1114,
                 "name": "index",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "124:13:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -385,7 +385,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1109,
+                  "id": 1113,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "124:7:6",
@@ -399,10 +399,10 @@
               },
               {
                 "constant": false,
-                "id": 1113,
+                "id": 1117,
                 "name": "productIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "148:20:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -412,7 +412,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1111,
+                    "id": 1115,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "148:7:6",
@@ -421,7 +421,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1112,
+                  "id": 1116,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "148:9:6",
@@ -435,10 +435,10 @@
               },
               {
                 "constant": false,
-                "id": 1116,
+                "id": 1120,
                 "name": "productIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "199:25:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -448,7 +448,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1114,
+                    "id": 1118,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "199:7:6",
@@ -457,7 +457,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1115,
+                  "id": 1119,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "199:9:6",
@@ -471,10 +471,10 @@
               },
               {
                 "constant": false,
-                "id": 1119,
+                "id": 1123,
                 "name": "partnerIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "262:20:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -484,7 +484,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1117,
+                    "id": 1121,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "262:7:6",
@@ -493,7 +493,7 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 1118,
+                  "id": 1122,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "262:9:6",
@@ -507,10 +507,10 @@
               },
               {
                 "constant": false,
-                "id": 1122,
+                "id": 1126,
                 "name": "partnerIdsIndex",
                 "nodeType": "VariableDeclaration",
-                "scope": 1123,
+                "scope": 1127,
                 "src": "313:25:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -520,7 +520,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1120,
+                    "id": 1124,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "313:7:6",
@@ -529,7 +529,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1121,
+                  "id": 1125,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "313:9:6",
@@ -544,12 +544,12 @@
             ],
             "name": "Supplier",
             "nodeType": "StructDefinition",
-            "scope": 1124,
+            "scope": 1128,
             "src": "54:318:6",
             "visibility": "public"
           }
         ],
-        "scope": 1125,
+        "scope": 1129,
         "src": "26:348:6"
       }
     ],
@@ -561,5 +561,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T00:56:16.078Z"
+  "updatedAt": "2018-12-23T13:03:35.462Z"
 }

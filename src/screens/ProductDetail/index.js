@@ -8,6 +8,8 @@ import Rating from './Rating'
 import Footer from './Footer'
 import FeaturesPage from './FeaturesPage'
 import getWeb3 from '../../util/web3/getWeb3'
+import { resolve } from 'url';
+import { rejects } from 'assert';
 
 class ProductDetail extends Component {
     state = {
@@ -37,7 +39,25 @@ class ProductDetail extends Component {
         .then(results=>{
             let supplier = results[0]
             let logs = results[1]
-            this.setState({supplier, logs})
+            this.setState({supplier})
+            
+            let listPromise = []
+            for (let i = 0; i < logs.length; i++) {
+                let log = logs[i]
+                listPromise.push(new Promise((resolve, reject)=>{
+                    merchandiseCheckEtherInstance.getPartner(log.addedBy+"000000000000000000000000")
+                    .then(partner=>{
+                        log.partner = partner
+                        resolve(log)
+                    })
+                    .catch(reject)
+                }))
+            }
+
+            return Promise.all(listPromise)
+        })
+        .then(logs=>{
+            this.setState({logs})
         })
     }
 
@@ -62,9 +82,9 @@ class ProductDetail extends Component {
                     userName={this.state.supplier.name}
                     position={user.position}
                 />
-                <Rating/>
+                {/* <Rating/> */}
                 <LogProduct logs={this.state.logs}/>
-                <LogPartner logs={this.state.logs}/>
+                {/* <LogPartner logs={this.state.logs}/> */}
                 <FeaturesPage />
                 <Footer />
             </div>

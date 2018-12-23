@@ -14,7 +14,7 @@ const styles = (theme) => ({
 class AddPartner extends Component {
   state = {
     address: "0x627306090abaB3A6e1400e9345bC60c78a8BEf57",
-    name: "Hung Dep Trai"
+    name: "Partner 1"
   }
 
   render() {

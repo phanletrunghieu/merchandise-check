@@ -4,6 +4,7 @@ library LogModel {
     struct Log {
         bytes32 id;
         string description;
+        address addedBy;
         uint256 createdAt;
         string video;//link
 

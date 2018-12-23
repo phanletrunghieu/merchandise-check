@@ -18,7 +18,7 @@ const styles = {
 
 class ControlledOpenSelect extends React.Component {
   state = {
-    value: null,
+    value: "",
     open: false,
   };
 
@@ -28,8 +28,10 @@ class ControlledOpenSelect extends React.Component {
 
   handleChange = event => {
     let partner = event.target.value
+    
     this.setState({value: partner });
     this.props.listProductByPartner(partner.id);
+    this.props.onChange(event)
   };
 
   handleClose = () => {
@@ -66,10 +68,6 @@ class ControlledOpenSelect extends React.Component {
     );
   }
 }
-
-ControlledOpenSelect.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 const mapStateToProps = (state) => ({
   partnerData: state.partner

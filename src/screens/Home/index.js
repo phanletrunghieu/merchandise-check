@@ -88,8 +88,9 @@ class Home extends Component {
       },
       ImagePhone: {
         position: "absolute",
-        top: 160,
-        right: 250,
+        bottom: 10,
+        right: 200,
+        height: "80vh"
       },
       UserInfoBackground: {
         minHeight: "100vh",
@@ -102,10 +103,9 @@ class Home extends Component {
       },
       IntroText: {
         position: "absolute",
-        top: "20%",
-        left: "20%",
-        height: 500,
-        width: 600,  
+        top: "50%",
+        left: 200,
+        transform: "translateY(-50%)",
       },
       Icon: {
         position: "absolute",
@@ -133,7 +133,7 @@ class Home extends Component {
                 </div>
             </NavItem>
           </NavbarNav>
-          <NavbarNav center={true}>
+          <NavbarNav>
             <NavItem>
                 <div data-wow-duration="1000ms" data-wow-delay="0" style={styles.NavBarAnimationStyle}>
                   <div style={{display: "inline-block"}} className="emerge">
@@ -165,19 +165,19 @@ class Home extends Component {
         </div>
         <div className="Background" style={styles.divTest}>
           <div className="emerge" style={styles.IntroText}>
-            <div style={{color: "#95cbeb", padding: 50}} className="MemberTitle">Merchandise</div>
+            <div style={{color: "#95cbeb", padding: 20}} className="MemberTitle">Merchandise check</div>
             <div style={{color: "#ffffff"}}  className="MemberInfo">
-            SQL injection is undoubtedly the most common method individuals use for hacking website databases. A database on a web server is an organized unit of storage, typically in table-based format. The database software that a web server runs is entirely separate from the software the server and server-side code interpretation run on (such as PHP or Python). SQL database programs use coded to manage the databases, meaning reading from table cells, writing data to table cells, etc.
+            Trust supplier, trust product, trust world
             </div>
           </div>
           <div className="emerge" style={styles.ImagePhone}>
-            <img src="https://uphinhnhanh.com/images/2018/11/30/haiBd.png"></img>
+            <img src="https://uphinhnhanh.com/images/2018/11/30/haiBd.png" style={{height: "100%"}}></img>
           </div>
         </div>
         <div id="term" className="Policy">
           <TermPolicy/>
         </div>
-        <div id="user"className="BackgroundUserInfo" style={styles.UserInfoBackground}>
+        {/* <div id="user"className="BackgroundUserInfo" style={styles.UserInfoBackground}>
           <div style={{textAlign: "center"}}>
             <div className="MemberTitle">Who We Are</div>
           </div>
@@ -227,7 +227,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div id="footer" className="FooterBackground">
           <div style={styles.Icon}>
             <a class="fb-ic">

@@ -114,14 +114,14 @@ class Log extends Component{
             <div style={styles.col}>
               <IntegrationAutosuggest innerRef={r=>this._inputlog=r}/>
               
-              <TextField
+              {/* <TextField
                 id="Link Video"
                 label="Add link video"
                 margin="normal"
                 fullWidth
                 value={this.state.link}
                 onChange={e=>this.setState({link: e.target.value})}
-              />
+              /> */}
               
               <Button onClick={this.InputValue}   color="primary">
                 Input

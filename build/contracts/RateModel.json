@@ -1,24 +1,24 @@
 {
   "contractName": "RateModel",
   "abi": [],
-  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820dfc091c7901aa51146b09b6fa539b1d65ab4e7033f9dacc5e9bbbaa8ff1db1140029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820dfc091c7901aa51146b09b6fa539b1d65ab4e7033f9dacc5e9bbbaa8ff1db1140029",
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820f78d02529eea27eb6c2436d7c3681d092be62e7b90129989fbb0b88205fb190a0029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820f78d02529eea27eb6c2436d7c3681d092be62e7b90129989fbb0b88205fb190a0029",
   "sourceMap": "26:94:5:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
   "deployedSourceMap": "26:94:5:-;;;;;;;;",
   "source": "pragma solidity ^0.4.24;\n\nlibrary RateModel {\n    struct Rate {\n        bytes32 partnerId;\n        byte[] rates;\n    }\n}",
-  "sourcePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/RateModel.sol",
+  "sourcePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/RateModel.sol",
   "ast": {
-    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/RateModel.sol",
+    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/RateModel.sol",
     "exportedSymbols": {
       "RateModel": [
-        1102
+        1106
       ]
     },
-    "id": 1103,
+    "id": 1107,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1095,
+        "id": 1099,
         "literals": [
           "solidity",
           "^",
@@ -34,23 +34,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1102,
+        "id": 1106,
         "linearizedBaseContracts": [
-          1102
+          1106
         ],
         "name": "RateModel",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "RateModel.Rate",
-            "id": 1101,
+            "id": 1105,
             "members": [
               {
                 "constant": false,
-                "id": 1097,
+                "id": 1101,
                 "name": "partnerId",
                 "nodeType": "VariableDeclaration",
-                "scope": 1101,
+                "scope": 1105,
                 "src": "72:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -59,7 +59,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 1096,
+                  "id": 1100,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "72:7:5",
@@ -73,10 +73,10 @@
               },
               {
                 "constant": false,
-                "id": 1100,
+                "id": 1104,
                 "name": "rates",
                 "nodeType": "VariableDeclaration",
-                "scope": 1101,
+                "scope": 1105,
                 "src": "99:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -86,7 +86,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1098,
+                    "id": 1102,
                     "name": "byte",
                     "nodeType": "ElementaryTypeName",
                     "src": "99:4:5",
@@ -95,7 +95,7 @@
                       "typeString": "bytes1"
                     }
                   },
-                  "id": 1099,
+                  "id": 1103,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "99:6:5",
@@ -110,29 +110,29 @@
             ],
             "name": "Rate",
             "nodeType": "StructDefinition",
-            "scope": 1102,
+            "scope": 1106,
             "src": "50:68:5",
             "visibility": "public"
           }
         ],
-        "scope": 1103,
+        "scope": 1107,
         "src": "26:94:5"
       }
     ],
     "src": "0:120:5"
   },
   "legacyAST": {
-    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/xxx/contracts/model/RateModel.sol",
+    "absolutePath": "/home/hieudeptrai/Desktop/MyProject/truffle/merchandise-check/contracts/model/RateModel.sol",
     "exportedSymbols": {
       "RateModel": [
-        1102
+        1106
       ]
     },
-    "id": 1103,
+    "id": 1107,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1095,
+        "id": 1099,
         "literals": [
           "solidity",
           "^",
@@ -148,23 +148,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1102,
+        "id": 1106,
         "linearizedBaseContracts": [
-          1102
+          1106
         ],
         "name": "RateModel",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "RateModel.Rate",
-            "id": 1101,
+            "id": 1105,
             "members": [
               {
                 "constant": false,
-                "id": 1097,
+                "id": 1101,
                 "name": "partnerId",
                 "nodeType": "VariableDeclaration",
-                "scope": 1101,
+                "scope": 1105,
                 "src": "72:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -173,7 +173,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 1096,
+                  "id": 1100,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "72:7:5",
@@ -187,10 +187,10 @@
               },
               {
                 "constant": false,
-                "id": 1100,
+                "id": 1104,
                 "name": "rates",
                 "nodeType": "VariableDeclaration",
-                "scope": 1101,
+                "scope": 1105,
                 "src": "99:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -200,7 +200,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1098,
+                    "id": 1102,
                     "name": "byte",
                     "nodeType": "ElementaryTypeName",
                     "src": "99:4:5",
@@ -209,7 +209,7 @@
                       "typeString": "bytes1"
                     }
                   },
-                  "id": 1099,
+                  "id": 1103,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "99:6:5",
@@ -224,12 +224,12 @@
             ],
             "name": "Rate",
             "nodeType": "StructDefinition",
-            "scope": 1102,
+            "scope": 1106,
             "src": "50:68:5",
             "visibility": "public"
           }
         ],
-        "scope": 1103,
+        "scope": 1107,
         "src": "26:94:5"
       }
     ],
@@ -241,5 +241,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T00:56:16.078Z"
+  "updatedAt": "2018-12-23T13:03:35.462Z"
 }

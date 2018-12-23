@@ -26,6 +26,7 @@ import Slide from '@material-ui/core/Slide';
 import Checkbox from '@material-ui/core/Checkbox';
 import QRCode from 'qrcode.react';
 import {listProduct} from '../../../../components/product/actions/list_product'
+import {listPartner} from '../../../../components/partner/actions/list_partner'
 import {deleteProduct} from '../../../../components/product/actions/delete_product'
 import {updateProduct} from '../../../../components/product/actions/update_product'
 import {grantProductPartner, ungrantProductPartner} from '../../../../components/product/actions/grant_product_partner'
@@ -84,6 +85,8 @@ const styles = theme => ({
 
 class ListProducts extends Component {
   state = {
+    assignedProduct: [],
+
     expanded: [],
     showDeleteDialog: false,
 
@@ -100,6 +103,7 @@ class ListProducts extends Component {
     super(props)
 
     props.listProduct();
+    props.listPartner();
   }
 
   handleExpandClick = (index) => {
@@ -181,9 +185,19 @@ class ListProducts extends Component {
       return
     
     if (checked) {
+      console.log("assign");
       this.props.grantProductPartner(product, partner)
+
+      let assignedProduct = this.state.assignedProduct
+      assignedProduct.push(product.id)
+      this.setState({assignedProduct})
     } else {
+      console.log("unassign");
       this.props.ungrantProductPartner(product, partner)
+
+      let assignedProduct = this.state.assignedProduct
+      assignedProduct = assignedProduct.filter(p=>p!==product.id)
+      this.setState({assignedProduct})
     }
   }
 
@@ -203,6 +217,12 @@ class ListProducts extends Component {
     readerBuffer.readAsArrayBuffer(file);
   }
 
+  onChangePartner = (e) => {
+    let partner = e.target.value
+    if(partner)
+      this.setState({assignedProduct: partner.productIds})
+  }
+
   render() {
     const { classes } = this.props;
 
@@ -211,7 +231,7 @@ class ListProducts extends Component {
         <Card style={{paddingLeft:30,paddingRight:30}}>
 
 
-          <ControlledOpenSelect ref={r=>this._inputlog=r}/>
+          <ControlledOpenSelect ref={r=>this._inputlog=r} onChange={e=>this.onChangePartner(e)} />
 
 
           <section className="text-center my-5">
@@ -251,9 +271,8 @@ class ListProducts extends Component {
                       <Tooltip title="Grant permission to the partner" placement="bottom">
                         <Checkbox
                           className={classes.checkboxs}
-                          checked={this.state.checkedA}
+                          checked={this.state.assignedProduct.findIndex(p=>p==product.id)!==-1}
                           onChange={(e)=>this.onGrantProductPartner(product, e.target.checked)}
-                          // value={}
                         />
                       </Tooltip>
                       <IconButton className={classes.btnDeleteProduct} onClick={()=>this.handleClickOpenDeleteDialog(product)}>
@@ -371,6 +390,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   listProduct: ()=>dispatch(listProduct()),
+  listPartner: ()=>dispatch(listPartner()),
   deleteProduct: (product)=>dispatch(deleteProduct(product)),
   updateProduct: (product)=>dispatch(updateProduct(product)),
   grantProductPartner: (product, partner)=>dispatch(grantProductPartner(product, partner)),

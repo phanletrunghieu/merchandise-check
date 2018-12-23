@@ -38,7 +38,7 @@ const productReducer = (state = initialState, action) => {
                 productsByPartner: action.products
             }
         case GRANT_PRODUCT_TO_PARTNER:
-            let productsByPartner = state.productsByPartner.filter(p=>p.id!==action.product.ID)
+            let productsByPartner = state.productsByPartner.filter(p=>p.id!==action.product.id)
             if(action.isGrant){
                 productsByPartner.push(action.product)
             }

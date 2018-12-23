@@ -20,12 +20,13 @@ contract LogStorage {
         _;
     }
 
-    function createLog(bytes32 _id, bytes32 _productId, string _description, string _video, uint256 _createdAt) public {
+    function createLog(bytes32 _id, bytes32 _productId, string _description, address _addedBy, string _video, uint256 _createdAt) public {
         uint256 newIndex = logIndex.length;
 
         logList[_id].id = _id;
         logList[_id].productId = _productId;
         logList[_id].description = _description;
+        logList[_id].addedBy = _addedBy;
         logList[_id].video = _video;
         logList[_id].createdAt = _createdAt;
         logList[_id].index = newIndex;
